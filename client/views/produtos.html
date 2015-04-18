@@ -1,0 +1,55 @@
+<div class="row">
+	<div class="list-group col-md-2">
+		<!-- <h3>Categorias</h3> -->
+		<a href="#" class="list-group-item disabled">
+		Todos <span class="badge">16</span>
+		</a>
+		<a href="#" class="list-group-item">Fotos <span class="badge">4</span></a>
+		<a href="#" class="list-group-item">Eletrônicos <span class="badge">4</span></a>
+		<a href="#" class="list-group-item">Casa <span class="badge">4</span></a>
+		<a href="#" class="list-group-item">Limpeza <span class="badge">4</span></a>
+	</div>
+	<div  ng-controller="ProdutosCtrl">
+		<!-- <div ng-if="!produtos">
+			<i class="fa fa-spinner fa-spin"></i>
+		</div> -->
+		<div ng-if="produtos" class="col-md-10">
+			<div class="col-sm-6 col-md-3" ng-repeat="produto in produtos">
+				<div class="thumbnail">
+					<a href="#"><img ng-src="{{produto.foto}}" alt="..."></a>
+					<div class="caption">
+						<span ng-if="produto.promocao" class="label label-success">Promoção</span>
+						<p>{{produto.descricao}}</p>
+						<h3 class="price text-success"><strong>R{{produto.preco | currency}}</strong></h3>
+						<p>
+							<a href="#" class="btn btn-primary" role="button">Comprar</a>
+							<a href="#" class="btn btn-default" role="button">Ver</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="col-md-12">
+		<nav>
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div> -->
+</div>

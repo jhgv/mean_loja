@@ -1,5 +1,5 @@
 {
-  "name": "node-js-getting-started",
+  "name": "node_loja",
   "version": "0.1.2",
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
@@ -7,7 +7,10 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "body-parser": "^1.12.2",
+    "express": "~4.9.x",
+    "mongoose": "^4.0.1",
+    "multer": "^0.1.8"
   },
   "engines": {
     "node": "0.10.x"

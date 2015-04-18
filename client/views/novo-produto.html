@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="page-header">
+		<h1>Novo produto</h1>
+	</div>
+	<div class="row">
+		<form  form-upload role="form" ng-submit="cadastrarProduto()" method="post" action="/api/upload" enctype="multipart/form-data">
+
+			<div class="col-md-3">
+				<label for="descricao">Preço</label>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">R$</span>
+					<input type="text" class="form-control" ng-model="novoProduto.preco">
+				</div>
+			</div>
+
+			
+			<div class="col-md-2">
+				<label >Promoção</label><br/>
+				<button type="button" class="btn" ng-class="{'btn-success':novoProduto.promocao, 'btn-default':!novoProduto.promocao}" ng-click="setPromocao()" >
+					<span ng-if="novoProduto.promocao">Em promoção</span>
+					<span ng-if="!novoProduto.promocao">Sem promoção</span>
+				
+				</button>
+			</div>
+
+			<div class="col-md-3">
+				<label for="descricao">Foto</label>
+				<div class="input-group">
+					<input type="file" name="fotoProduto">
+				</div>
+			</div>
+	
+			<div class="col-md-12">
+				<label for="descricao">Descrição</label>
+				<textarea id="descricao" type="text" class="form-control" rows="5" ng-model="novoProduto.descricao"></textarea> 
+			</div>
+
+			<div style="margin-top:10px;" class="col-md-2">
+				<button type="submit" class="btn btn-success">
+					Salvar
+				</button>
+			</div>
+
+		</form>
+	</div>
+	
+</div>
